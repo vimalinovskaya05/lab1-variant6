@@ -1,0 +1,120 @@
+<mxfile host="app.diagrams.net" modified="2026-10-12T00:00:00.000Z" agent="5.0 (Windows)" etag="lab1-variant6-flowchart" version="24.2.5" type="device">
+  <diagram id="age-category-flowchart" name="Возрастная категория">
+    <mxGraphModel dx="1126" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Начало -->
+        <mxCell id="start" value="Начало" style="ellipse;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Ввод age -->
+        <mxCell id="input" value="Ввод age" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="160" height="40" as="geometry"/>
+        </mxCell>
+        <!-- age < 0? -->
+        <mxCell id="check_neg" value="age < 0?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="200" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Вывод ошибки -->
+        <mxCell id="error" value="Вывод: "Ошибка: возраст не может быть отрицательным"" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="310" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- age <= 11? -->
+        <mxCell id="check_child" value="age <= 11?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="310" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Вывод Ребёнок -->
+        <mxCell id="child" value="Вывод: "Ребёнок"" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="310" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <!-- age <= 17? -->
+        <mxCell id="check_teen" value="age <= 17?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="410" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Вывод Подросток -->
+        <mxCell id="teen" value="Вывод: "Подросток"" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="410" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <!-- age <= 64? -->
+        <mxCell id="check_adult" value="age <= 64?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="510" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Вывод Взрослый -->
+        <mxCell id="adult" value="Вывод: "Взрослый"" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="510" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Вывод Пожилой -->
+        <mxCell id="senior" value="Вывод: "Пожилой"" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="610" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Конец -->
+        <mxCell id="end" value="Конец" style="ellipse;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="680" width="80" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Стрелки -->
+        <!-- Начало -> Ввод -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="start" target="input">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Ввод -> age < 0? -->
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="input" target="check_neg">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- age < 0? Да -> Ошибка -->
+        <mxCell id="e3" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=12;" edge="1" parent="1" source="check_neg" target="error">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Ошибка -> Конец -->
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="error" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- age < 0? Нет -> age <= 11? -->
+        <mxCell id="e5" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=12;" edge="1" parent="1" source="check_neg" target="check_child">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- age <= 11? Да -> Ребёнок -->
+        <mxCell id="e6" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=12;" edge="1" parent="1" source="check_child" target="child">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Ребёнок -> Конец -->
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="child" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- age <= 11? Нет -> age <= 17? -->
+        <mxCell id="e8" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=12;" edge="1" parent="1" source="check_child" target="check_teen">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- age <= 17? Да -> Подросток -->
+        <mxCell id="e9" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=12;" edge="1" parent="1" source="check_teen" target="teen">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Подросток -> Конец -->
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="teen" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- age <= 17? Нет -> age <= 64? -->
+        <mxCell id="e11" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=12;" edge="1" parent="1" source="check_teen" target="check_adult">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- age <= 64? Да -> Взрослый -->
+        <mxCell id="e12" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=12;" edge="1" parent="1" source="check_adult" target="adult">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Взрослый -> Конец -->
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="adult" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- age <= 64? Нет -> Пожилой -->
+        <mxCell id="e14" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=12;" edge="1" parent="1" source="check_adult" target="senior">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Пожилой -> Конец -->
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" edge="1" parent="1" source="senior" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
